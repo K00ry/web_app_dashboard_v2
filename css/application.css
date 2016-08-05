@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /*! normalize.css v4.0.0 | MIT License | github.com/necolas/normalize.css */
 /**
  * 1. Change the default font family in all browsers (opinionated).
@@ -396,7 +397,8 @@ header {
   flex-direction: row;
   justify-content: space-between;
   width: 100%;
-  background-color: #9999FF; }
+  background-color: #9900CC;
+  height: 80px; }
   header h1 {
     font-size: 1.2em;
     padding: 6px; }
@@ -415,6 +417,12 @@ header {
     border-left: 2px solid #5D625C; }
   .notification img {
     display: none; }
+    @media (min-width: 768px) {
+      .notification img {
+        display: inline-block;
+        width: 50px;
+        height: 50px;
+        border-radius: 50%; } }
   .notification svg {
     width: 24px;
     height: 24px; }
@@ -426,9 +434,20 @@ header {
   width: 100%; }
 
 .left-nav {
-  background-color: #9900CC; }
+  background-color: #9999FF;
+  margin-bottom: 4px;
+  height: 60px; }
   .left-nav svg {
     margin: 10px 10px; }
+
+.traffic-widget {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 100%;
+  margin: 20px 10px; }
+  .traffic-widget h2 {
+    flex-grow: 2; }
 
 .profile-pic {
   width: 50px;
@@ -441,5 +460,42 @@ header {
 svg {
   width: 40px;
   height: 40px; }
+
+.alert {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  width: 96%;
+  background: #D291DD;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  height: 80px;
+  margin: 10px auto;
+  width: 96%; }
+  .alert span {
+    padding: 8px 0; }
+  .alert a {
+    margin-top: 4px; }
+
+.close-thik:after {
+  content: '✖';
+  margin: 1px 3px; }
+
+#search {
+  width: 96%;
+  height: 40px;
+  padding: 8px;
+  margin: 10px auto;
+  border-radius: 10px;
+  border: 2px solid #815889;
+  font-size: 1em; }
+
+main h2 {
+  float: left;
+  font-size: 2em; }
+
+.traffic-h2 {
+  width: 100px;
+  margin: 10px 0; }
 
 /*# sourceMappingURL=application.css.map */

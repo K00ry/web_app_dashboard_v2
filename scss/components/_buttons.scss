@@ -1,0 +1,27 @@
+.alert {
+	@include flex-display(flex, row, space-around, 96%);
+    background: #D291DD;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    
+    height: 80px;
+    margin:  10px $auto;
+    
+    width: 96%;
+    	& span{
+
+
+    		padding: 8px 0;
+    	}
+    	& a{
+
+    		margin-top: 4px;
+
+    	}
+
+}
+
+.close-thik:after {
+    content: '✖';
+    margin: 1px 3px;
+}

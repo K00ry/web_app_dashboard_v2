@@ -107,35 +107,13 @@ var myBarChart = new Chart(barChart, {
         labels: ["January", "February", "March", "April", "May", "June", "July"],
         datasets: [{
             data: [950, 750, 1500, 1000, 1700, 2500, 1350],
+            backgroundColor: 'rgba(138, 0, 255, 1)',
+            
+        },{
+            data: [450, 750, 1200, 1600, 1200, 2000, 1000],
             backgroundColor: 'rgba(54, 202, 21, 1)',
-            borderColor: 'rgba(54, 202, 21, 1)',
-            borderWidth: 1
+            
         }]
-    }
-
-});
-
-
-
-
-//donut chart for mobile users
-
-
-var donutChart = $('#donut-chart');
-var myDoughnutChart = new Chart(donutChart, {
-    type: 'doughnut',
-    data: {
-        labels: ["January", "February", "March"],
-        datasets: [{
-            data: [250, 350, 1500],
-             backgroundColor: [
-                "#336699",
-                "#00CC33",
-                "#3333CC"
-                
-            ]
-        }]
-
     },
     options: {
         legend: {
@@ -153,18 +131,36 @@ var myDoughnutChart = new Chart(donutChart, {
 
 
 
+//donut chart for mobile users
 
 
+var donutChart = $('#donut-chart');
+var myDoughnutChart = new Chart(donutChart, {
+    type: 'doughnut',
+    data: {
+        labels: ["Desktop", "Tablet", "Mobile", "other"],
+        datasets: [{
+            data: [250, 350, 1500, 20],
+            backgroundColor: [
+                "#336699",
+                "#00CC33",
+                "#3333CC",
+                "#6633ff"
 
+            ]
+        }]
 
+    },
+    options: {
 
+        responsive: true,
+        legend: {
+            position: 'bottom',
+            labels: {
+                fontFamily: 'Roboto, sans-serif',
+                boxWidth: 14
+            }
+        }
+    }
 
-
-
-
-
-
-
-
-
-
+});

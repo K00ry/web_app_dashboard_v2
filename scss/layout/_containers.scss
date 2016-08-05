@@ -1,21 +1,20 @@
-
-.main-content{
-	@include flex-display(flex,column,space-around,100%);
-
+.main-content {
+    @include flex-display(flex, column, space-around, 100%);
 }
 
-.left-nav{
-
-	background-color: #9900CC;
-
-
-
-	& svg{
-		margin: 10px 10px;
-
-	}
-
+.left-nav {
+    background-color: #9999FF;
+    margin-bottom: 4px;
+    height: 60px;
+    & svg {
+        margin: 10px 10px;
+    }
 }
 
-
-
+.traffic-widget {
+    @include flex-display(flex, row, space-between, 100%);
+    margin: 20px 10px;
+    & h2 {
+        flex-grow: 2;
+    }
+}
