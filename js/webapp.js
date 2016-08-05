@@ -12,8 +12,8 @@ var hourly_data = {
     labels: ["10am-12pm", "12pm-2pm", "2pm-4pm", "4pm-6pm"],
     datasets: [{
         data: [250, 550, 750, 600, 200],
-        backgroundColor: 'rgba(232, 37, 21, 0.2',
-        borderColor: 'rgba(232, 37, 21, 1',
+        backgroundColor: 'rgba(232, 37, 21, 0.2)',
+        borderColor: 'rgba(232, 37, 21, 1)',
         borderWidth: 0.2
     }]
 };
@@ -107,7 +107,7 @@ var myBarChart = new Chart(barChart, {
         labels: ["January", "February", "March", "April", "May", "June", "July"],
         datasets: [{
             data: [950, 750, 1500, 1000, 1700, 2500, 1350],
-            backgroundColor: 'rgba(54, 202, 21, 0.2)',
+            backgroundColor: 'rgba(54, 202, 21, 1)',
             borderColor: 'rgba(54, 202, 21, 1)',
             borderWidth: 1
         }]
@@ -125,13 +125,23 @@ var donutChart = $('#donut-chart');
 var myDoughnutChart = new Chart(donutChart, {
     type: 'doughnut',
     data: {
-        labels: ["January", "February", "March", "April", "May", "June", "July"],
+        labels: ["January", "February", "March"],
         datasets: [{
-            data: [950, 750, 1500, 1000, 1700, 2500, 1350],
-            backgroundColor: 'rgba(54, 202, 21, 0.2)',
-            borderColor: 'rgba(54, 202, 21, 1)',
-            borderWidth: 1
+            data: [250, 350, 1500],
+             backgroundColor: [
+                "#336699",
+                "#00CC33",
+                "#3333CC"
+                
+            ]
         }]
+
+    },
+    options: {
+        legend: {
+            display: false
+        }
+
     }
 
 });

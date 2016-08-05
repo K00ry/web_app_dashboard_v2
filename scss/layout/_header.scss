@@ -1,22 +1,30 @@
+header {
+    @include flex-display(flex, row, space-between, 100%);
+    background-color: #9999FF;
+    & h1 {
+        font-size: 1.2em;
+        padding: 6px;
+        & b{
+        	font-size: 1.3em;
 
-header{
-	position:relative;
-	width:100%;
-	margin:$auto;
-	height:300px;
-	& h1{
-		float: left;
-	}
-
+        }
+    }
 }
 
-.notification{
+.notification {
+    @include flex-display(flex, row, space-around, 50%, center);
+    & h2 {
+        font-size: 1em;
+        padding: 8px;
+        border-left: 2px solid #5D625C;
+    }
+    & img {
+        display: none;
+    }
 
-	float: right;
-	@include flex-display(flex,row,space-around,50%,center);
+    & svg{
+    	width: 24px;
+	    height: 24px;
 
-
+    }
 }
-
-
-
