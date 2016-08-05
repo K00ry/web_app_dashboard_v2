@@ -1,0 +1,26 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+   margin: 0;
+  padding: 0;
+
+    
+    text-align: center;
+    font-family: $main-font;
+    color: $text-color;
+    background: $main-background-color;
+}
+
+
+/* Link Styles */
+
+a {
+    text-decoration: none;
+    color: $link-color;
+      &:hover {
+          color: #9968FF;
+      }
+}
+

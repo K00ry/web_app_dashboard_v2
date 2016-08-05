@@ -1,0 +1,42 @@
+// color variabes \\
+
+$main-background-color : #C7DAEC;
+$main-content-color    : #E4F1FF;
+$link-color			   : #6633ff;
+$text-black			   : #222;
+$nav-li-color		   : #BFBFBF;
+$head-color			   : #43495C;
+$shadow		    	   : #D6D2FF;
+$text-shadow           : 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #fff, 0 0 20px $shadow, 0 0 30px $shadow, 0 0 40px $shadow, 0 0 55px $shadow, 0 0 75px $shadow;
+
+// lightend colors \\
+
+$text-color			   : rgba($text-black,.7);
+$link-color-light	   : rgba($link-color,.6);
+$h-color			   : rgba($head-color,.8);
+
+// font variables \\
+
+$main-font  : 'Poiret One', cursive;
+$p-font     : 'Julius Sans One', sans-serif;
+$h-font     : 'Limelight', cursive;
+$sm-font    : 1em;
+$md-font    : 1.3em;
+$lg-font    : 2em;
+$font-w     : 900;
+
+// border variable \\
+
+$border   :  2px solid $nav-li-color;
+ 
+// utilities \\
+
+$auto    :  auto;
+$full    :  100%;
+$trans   :  all .5s;
+
+// variables for media queries \\
+
+$brk-tablet    : 768px;
+$brk-laptop    : 1024px; 
+

@@ -1,0 +1,22 @@
+
+header{
+	position:relative;
+	width:100%;
+	margin:$auto;
+	height:300px;
+	& h1{
+		float: left;
+	}
+
+}
+
+.notification{
+
+	float: right;
+	@include flex-display(flex,row,space-around,50%,center);
+
+
+}
+
+
+

@@ -58,7 +58,7 @@ var monthly_data = {
 
 // summing the chart
 
-var ctx = $("#traffic");
+var ctx = $("#line-chart");
 
 var myChart = new Chart(ctx, {
     type: 'line',
@@ -73,27 +73,66 @@ var myChart = new Chart(ctx, {
 
 //click through the traffic tabs
 
-$("#hourly").click(function(){
-	myChart.config.data = hourly_data;
-	myChart.update();
+$("#hourly").click(function() {
+    myChart.config.data = hourly_data;
+    myChart.update();
 
 });
 
-$("#daily").click(function(){
-	myChart.config.data = daily_data;
-	myChart.update();
+$("#daily").click(function() {
+    myChart.config.data = daily_data;
+    myChart.update();
 
 });
 
-$("#weekly").click(function(){
-	myChart.config.data = weekly_data;
-	myChart.update();
+$("#weekly").click(function() {
+    myChart.config.data = weekly_data;
+    myChart.update();
 
 });
 
-$("#monthly").click(function(){
-	myChart.config.data = monthly_data;
-	myChart.update();
+$("#monthly").click(function() {
+    myChart.config.data = monthly_data;
+    myChart.update();
+
+});
+
+
+//bar chart  for daily traffic
+
+var barChart = $('#bar-chart');
+var myBarChart = new Chart(barChart, {
+    type: 'bar',
+    data: {
+        labels: ["January", "February", "March", "April", "May", "June", "July"],
+        datasets: [{
+            data: [950, 750, 1500, 1000, 1700, 2500, 1350],
+            backgroundColor: 'rgba(54, 202, 21, 0.2)',
+            borderColor: 'rgba(54, 202, 21, 1)',
+            borderWidth: 1
+        }]
+    }
+
+});
+
+
+
+
+//donut chart for mobile users
+
+
+var donutChart = $('#donut-chart');
+var myDoughnutChart = new Chart(donutChart, {
+    type: 'doughnut',
+    data: {
+        labels: ["January", "February", "March", "April", "May", "June", "July"],
+        datasets: [{
+            data: [950, 750, 1500, 1000, 1700, 2500, 1350],
+            backgroundColor: 'rgba(54, 202, 21, 0.2)',
+            borderColor: 'rgba(54, 202, 21, 1)',
+            borderWidth: 1
+        }]
+    }
 
 });
 
