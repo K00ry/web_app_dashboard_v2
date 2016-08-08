@@ -110,14 +110,17 @@
             <span>Latest update available! Please update your application to ensure smooth and silky administration.</span>
             <a href="#" class="close-thik"></a>
         </div>
-        <h2 class="traffic-h2">Traffic</h2>
         <div class="traffic-widget">
+        <h2 class="traffic-h2">Traffic</h2>
+        <div class="times">
             <input type="button" value="Hourly" id="hourly">
             <input type="button" value="Daily" id="daily">
             <input type="button" value="Weekly" id="weekly">
             <input type="button" value="Monthly" id="monthly">
         </div>
         <canvas id="line-chart" width="400" height="400"></canvas>
+        </div>
+
         <div class="daily-widget">
             <h2>DAILY TRAFFIC</h2>
             <canvas id="bar-chart" width="400" height="400"></canvas>
@@ -240,7 +243,7 @@
                 </div>
                 <span class="join-date">2/22/15</span>
             </div>
-            <div class="member-info">
+            <div class="member-info last">
                 <img class="user-image" src="https://s3.amazonaws.com/uifaces/faces/twitter/zakiwarfel/48.jpg" alt="picture of zak">
                 <div class="info">
                     <span class="member-name">zaki warfel</span>
@@ -275,7 +278,7 @@
                 </div>
                 <img class="activity-arrow" src="icons/icon-right-arrow.svg" alt="Go to activity icon">
             </div>
-            <div class="activity-details">
+            <div class="activity-details last">
                 <img class="activity-icon" src="icons/icon-write.svg" alt="New post icon">
                 <div class="info">
                     <span class="activity-name">Cullen Rutherford posted MyApp's SEO tips</span>
@@ -291,14 +294,14 @@
                 <legend>Find and message user</legend>
                     <input id="search-user" type="text" name="search" placeholder="Search for user..." data-search="">
                     <textarea id="user-message" name="message" placeholder="Message for user"></textarea>
-                    <button type="submit" value="send" id="btn-message-send">Send</button>
+                    <button class="action-button blue large-button" type="submit" value="send" id="btn-message-send">Send</button>
                 </fieldset>
             </form>
         </div>
         <div class="settings container">
             <h2>SETTINGS</h2>
-            <div class="wrapper-settings">
-                        <h3 class="widget-title">Settings</h3>
+            
+                       
                         <form id="user-settings-form">
                             <fieldset>
                                 <legend>Adjust your settings</legend>
@@ -312,11 +315,11 @@
                                 <div class="option">
                                     <span class="label">Set profile to public</span>
                                     <label class="switch">
-                                        <input type="checkbox" id="profile-pref">
+                                        <input  type="checkbox" id="profile-pref">
                                         <span class="slider round"></span>
                                     </label>
                                 </div>
-                                <label for="user-timezone">Select Timezone</label>
+                                <label class="none" for="user-timezone">Select Timezone</label>
                                 <select id="user-timezone" name="timezone-select">
                                     <option value="" disabled="" selected="" hidden="">Select Timezone</option>
                                     <option value="Pacific/Midway">(GMT-11:00) Midway Island, Samoa</option>
@@ -410,11 +413,12 @@
                                     <option value="Pacific/Tongatapu">(GMT+13:00) Nuku'alofa</option>
                                     <option value="Pacific/Kiritimati">(GMT+14:00) Kiritimati</option>
                                 </select>
-                                <button type="submit" value="send" id="btn-settings-save">Save</button>
-                                <button type="reset" value="cancel" id="btn-settings-cancel">Cancel</button>
+                                <div class="wrapper-button">
+                                <button class="action-button blue small-button" type="submit" value="send" id="btn-settings-save">Save</button>
+                                <button class="action-button blue small-button" type="reset" value="cancel" id="btn-settings-cancel">Cancel</button></div>
                             </fieldset>
                         </form>
-                    </div>
+                    
         </div>
     </main>
     <script src="https://code.jquery.com/jquery-1.12.3.min.js"></script>

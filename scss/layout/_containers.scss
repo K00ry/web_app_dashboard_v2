@@ -14,8 +14,8 @@
     }
 }
 
-.traffic-widget {
-    @include flex-display(flex, row, space-between, 100%);
+.times {
+    @include flex-display(flex, row, space-around, 100%);
     margin: 20px 10px;
     & h2 {
         flex-grow: 2;
@@ -84,11 +84,9 @@
     border-bottom: 2px solid rgba(175, 92, 138, 0.1);
     margin-bottom: 10px;
     padding-bottom: 10px;
-    & img{
+    & img {
         margin-right: 4px;
-
     }
-
     & .activity-time {
         color: #0066CC;
     }
@@ -100,6 +98,10 @@
         width: 20px;
         height: 20px;
     }
+}
+
+.last {
+    border-bottom: none;
 }
 
 .info {

@@ -24,6 +24,24 @@ a {
 
 h2 {
   color: $text-black-l;
-
 }
+
+  legend{
+    display:none;
+
+  }
+  fieldset{
+
+    border: none;
+    width:100%;
+    padding: 0;
+    & .none{
+      display: none;
+
+    }
+
+  }
+  form{
+    width:100%;
+  }
 

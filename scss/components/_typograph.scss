@@ -1,25 +1,24 @@
 #search ,#search-user{
-    width: 96%;
-    height: 40px;
-    padding: 8px;
-    margin: 10px $auto;
+    @include button-styles(96%,40px,10px $auto,$button-color,8px,1em);
     border-radius: 10px;
     border: 2px solid #815889;
-    font-size: 1em;
+    
 }
 
 #user-message{
-	  width: 96%;
-    height: 80px;
-    padding: 10px;
-    margin: 10px $auto;
+    @include button-styles(96%,80px,10px $auto,$button-color,10px,1em);
+	
     border-radius: 10px;
     border: 2px solid #815889;
-    font-size: 1em;
+   
 
+}
+#user-timezone{
+    @include button-styles(100%,40px,10px $auto,$button-color,8px,1em);
 
 
 }
+
 
 
 
@@ -32,3 +31,5 @@ main h2 {
     width: 100px;
     margin: 10px 0;
 }
+
+
