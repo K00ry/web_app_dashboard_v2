@@ -3,8 +3,8 @@
 }
 
 body {
-   margin: 0;
-  padding: 0;
+
+ 
     text-align: center;
     font-family: $main-font;
     color: #E7F0E2 ;
@@ -20,5 +20,10 @@ a {
       &:hover {
           color: #9968FF;
       }
+}
+
+h2 {
+  color: $text-black-l;
+
 }
 

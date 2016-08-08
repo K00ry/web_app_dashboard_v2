@@ -9,8 +9,19 @@ $head-color			   : #43495C;
 $shadow		    	   : #D6D2FF;
 $text-shadow           : 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #fff, 0 0 20px $shadow, 0 0 30px $shadow, 0 0 40px $shadow, 0 0 55px $shadow, 0 0 75px $shadow;
 
-// lightend colors \\
 
+
+
+
+
+// added colors
+
+$light-blue	  : #CCCCCC;
+$hard-blue	  : #5F74CF;
+
+// lightend colors \\
+$text-black-l	  		   : rgba($text-black,.5);
+$hard-blue-l			   : rgba($hard-blue,.7);
 $text-color			   : rgba($text-black,.7);
 $link-color-light	   : rgba($link-color,.6);
 $h-color			   : rgba($head-color,.8);
