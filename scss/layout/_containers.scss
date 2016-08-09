@@ -1,11 +1,29 @@
+   
 .main-content {
-    @include flex-display(flex, column, space-around, 100%);
+    @include flex-display(flex, column, space-between, 100%);
+    @include media(tablet) {
+        
+        @include flex-display(flex, row, space-around, 100%);
+            
+        }
+
+        .main-wrapper{
+            margin:auto;
+
+        }
+
 }
 
 .left-nav {
+    @include flex-display(flex, row, space-around, 100%);
     background-color: #9999FF;
     margin-bottom: 4px;
     height: 60px;
+    @include media(tablet) {
+        @include flex-display(flex, column, flex-start, 15%,center);
+        height: inherit;
+            
+        }
     & svg {
         margin: 10px 10px;
         border-bottom: 2px solid black;
