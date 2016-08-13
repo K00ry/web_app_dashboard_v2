@@ -1,2 +1,67 @@
+.traffic-widget {
+	border-bottom:$border-color;
+    @include media(tablet) {
+        padding: 20px;
+        margin: 0 auto;
+        width: 95%;
+    }
+}
+
+.mobile-users{
+	border-top:$border-color;
+	@include media(tablet) {
+		border-top:none;
+		border-left:$border-color;
+              
+            }
 
 
+
+}
+
+.tablet-container {
+    @include media(tablet) {
+        @include flex-display(flex, row, space-between, 100%);
+        & .container,
+        .wrapper {
+            @include flex-display(flex, column, space-between, 50%, center);
+            padding: 20px 20px;
+            @include media(tablet) {
+                margin: 0;
+            }
+            @include media(laptop) {
+                padding:30px 30px;
+            }
+        }
+        & .new-members,
+        .settings {
+            margin: 0;
+        }
+    }
+}
+
+.container {
+    border-bottom: $border-color;
+}
+
+.settings {
+    border-bottom: none;
+    padding-bottom: 20px;
+}
+
+.message-user {
+    padding-bottom: 20px;
+    @include media(tablet) {
+        border: none;
+        margin-bottom: 50px;
+    }
+}
+
+.settings ,.recent-activity {
+    @include media(tablet) {
+        border-left: $border-color;
+    }
+}
+
+.new-members,
+.message-user {}

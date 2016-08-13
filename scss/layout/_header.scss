@@ -1,25 +1,56 @@
 header {
-    @include flex-display(flex, row, space-between, 100%);
-    background-color: #9900CC;
-    height: 80px;
+    @include flex-display(flex, row, space-between, 100%, center);
+    background-color: $dark-purple-m;
+    height: 50px;
+    border-radius:2px;
+    @include media(tablet) {
+        height: 66px;
+    }
     & h1 {
-        font-size: 1.2em;
-        padding: 6px;
-        & b {
-            font-size: 1.3em;
+        @include font-fam-size( 1em, $main-font-2, bolder, #D9C0FF);
+         padding: 10px;
+        @include media(tablet) {
+            font-size: 1.4em;
+            padding: 20px;
         }
+          @include media(laptop) {
+            padding: 20px;
+                
+
+               }
+        & b {
+            @include font-fam-size( 1.4em, $main-font-2, bolder, $text-black-m);
+        }
+       
     }
 }
 
 .notification {
-    @include flex-display(flex, row, space-around, 50%, center);
+    @include flex-display(flex, row, space-around, 40%, center);
+    @include media(tablet) {
+        width: 30%;
+    }
+    @include media(laptop) {
+        width: 20%;
+    }
+    & a {
+        @include flex-display(flex, column,space-between,50%);
+       
+        border-right: 2px solid $text-black-m;
+        @include media(tablet) {
+            width: 20%;
+            
+        }
+    }
     & h2 {
-        font-size: 1em;
-        padding: 8px;
-        border-left: 2px solid #5D625C;
+        @include font-fam-size( 1.1em, $main-font-2, bolder, $text-black-m);
+        @include media(tablet) {
+            @include font-fam-size( 1.4em, $main-font-2, bolder, $text-black-m);
+            width: 50%;
+        }
     }
     & img {
-        display: none; 
+        display: none;
         @include media(tablet) {
             display: inline-block;
             width: 50px;
@@ -28,7 +59,7 @@ header {
         }
     }
     & svg {
-        width: 24px;
-        height: 24px;
+        width: 30px;
+        height: 27px;
     }
 }

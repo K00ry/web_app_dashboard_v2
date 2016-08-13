@@ -6,12 +6,9 @@ $link-color			   : #6633ff;
 $text-black			   : #222;
 $nav-li-color		   : #BFBFBF;
 $head-color			   : #43495C;
-$shadow		    	   : #D6D2FF;
-$text-shadow           : 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #fff, 0 0 20px $shadow, 0 0 30px $shadow, 0 0 40px $shadow, 0 0 55px $shadow, 0 0 75px $shadow;
-
-
-
-
+$shadow		    	   : #FFBD4F;
+$text-shadow           :  0 0 20px $shadow, 0 0 30px $shadow, 0 0 40px $shadow, 0 0 55px $shadow, 0 0 75px $shadow;
+$border-color		   : 2px dotted rgba(0, 0, 0, 0.1);
 
 
 // added colors
@@ -19,10 +16,16 @@ $text-shadow           : 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #fff, 0 0 20px $s
 $light-blue	  : #CCCCCC;
 $hard-blue	  : #5F74CF;
 $button-color : #D3D1FF;
+$dark-purple  : #7000CE;
+$body-text    : #E7F0E2;
+$highlight	  : #EBB301;
 
 // lightend colors \\
 $text-black-l	  		   : rgba($text-black,.5);
+$text-black-m	  		   : rgba($text-black,.9);
 $hard-blue-l			   : rgba($hard-blue,.7);
+$dark-purple-l			   : rgba($dark-purple,.2);
+$dark-purple-m			   : rgba($dark-purple,.6);
 $text-color			   : rgba($text-black,.7);
 $link-color-light	   : rgba($link-color,.6);
 $h-color			   : rgba($head-color,.8);
@@ -30,8 +33,10 @@ $h-color			   : rgba($head-color,.8);
 // font variables \\
 
 $main-font  : 'Poiret One', cursive;
+$main-font-2: 'Josefin Sans', sans-serif;
 $p-font     : 'Julius Sans One', sans-serif;
 $h-font     : 'Limelight', cursive;
+
 $sm-font    : 1em;
 $md-font    : 1.3em;
 $lg-font    : 2em;
@@ -45,7 +50,8 @@ $border   :  2px solid $nav-li-color;
 
 $auto    :  auto;
 $full    :  100%;
-$trans   :  all .5s;
+$trans   :  background-color .6s, color .8s, border .1s;
+$trans-default:all 1s;
 
 // variables for media queries \\
 

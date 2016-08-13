@@ -3,11 +3,11 @@
 }
 
 body {
-
  
+
     text-align: center;
     font-family: $main-font;
-    color: #E7F0E2 ;
+    color: #E7F0E2;
     background: $main-background-color;
 }
 
@@ -17,31 +17,64 @@ body {
 a {
     text-decoration: none;
     color: $link-color;
-      &:hover {
-          color: #9968FF;
-      }
+    
 }
 
 h2 {
-  color: $text-black-l;
+    color: $text-black;
 }
 
-  legend{
-    display:none;
+legend {
+    display: none;
+}
 
-  }
-  fieldset{
-
+fieldset {
     border: none;
-    width:100%;
+    width: 100%;
     padding: 0;
-    & .none{
-      display: none;
+    & .none {
+        display: none;
+    }
+}
 
+form {
+    width: 100%;
+}
+#donut-chart {
+    
+     @include media(tablet) {
+           
+    }
+     @include media(laptop) {
+
+      
+                
+            }
+
+}
+
+canvas {
+  padding:10px;
+    width: 100% !important;
+    height: auto !important;
+    max-height: 400px;
+     @include media(tablet) {
+       padding:0;
+    }
+     @include media(laptop) {
+        max-height: 500px;
     }
 
-  }
-  form{
-    width:100%;
-  }
+}
+// popup alert styles\\
+.ui-autocomplete-input{
+    
+
+}
+
+
+
+
+
+
 

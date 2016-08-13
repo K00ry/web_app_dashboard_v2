@@ -1,12 +1,12 @@
 #search ,#search-user{
-    @include button-styles(96%,40px,10px $auto,$button-color,8px,1em);
+    @include button-styles(96%,40px,10px $auto,$button-color,8px,1.2em);
     border-radius: 10px;
     border: 2px solid #815889;
     
 }
 
 #user-message{
-    @include button-styles(96%,80px,10px $auto,$button-color,10px,1em);
+    @include button-styles(96%,80px,10px $auto,$button-color,10px,1.1em);
 	
     border-radius: 10px;
     border: 2px solid #815889;
@@ -30,6 +30,12 @@ main h2 {
 .traffic-h2 {
     width: 100px;
     margin: 10px 0;
+    @include media(tablet) {
+            margin-top:9px;
+              margin-bottom: 40px;
+           }
+
+
 }
 
 

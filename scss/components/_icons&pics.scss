@@ -1,4 +1,5 @@
-.profile-pic,.user-image {
+.profile-pic,
+.user-image {
     width: 50px;
     height: 50px;
     border-radius: 50px;
@@ -8,24 +9,37 @@
     }
 }
 
-
-
-
-svg{
-	width: 40px;
-	height: 40px;
+svg {
+    width: 40px;
+    height: 40px;
 }
 
-.twitter-svg,.google-svg{
-	width: 30px;
-	height: 30px;
-
-
+.twitter-svg,
+.google-svg {
+    width: 30px;
+    height: 30px;
 }
+
 .activity-icon,
-.activity-arrow{
-	width:40px;
-	height:40px;
+.activity-arrow {
+    width: 40px;
+    height: 40px;
+}
 
+.visits-svg,
+.setting-svg {
+    @include media(tablet) {
+        margin-left: 13px;
+    }
+}
 
+.dot {
+  position:relative;
+    left: 20px;
+    top:2px;
+    width: 8px;
+    height: 8px;
+    background-color: #EBB301;
+    border-radius: 8px;
+    
 }

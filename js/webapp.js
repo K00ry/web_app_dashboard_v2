@@ -1,10 +1,44 @@
-//Global chart configurations
+//variables
 
-Chart.defaults.global.hover.mode = 'single';
+$bell_button = $('#notify-button');
+$popup = $('.popup');
+$popup_close = $('.popup-close');
+$dot = $('.dot');
+$alert = $('.alert');
+$alert_close = $('.close-thik');
+$search = $('#search');
+$times_class = $('.times a');
 
 
 
-// diffrent charts data for updating
+
+// notify button trigger
+
+
+$bell_button.click(function(){
+    $popup.fadeIn().css('display','flex');
+
+});
+$popup_close.click(function(){
+    $popup.fadeOut();
+
+
+});
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/////// diffrent charts data for updating \\\\\\\
 
 //hourly chart
 
@@ -25,7 +59,7 @@ var hourly_data = {
 var daily_data = {
     labels: ["monday", "tuesday", "wednesday", "thursday", "friday", "saturday", "sunday"],
     datasets: [{
-        data: [250, 2250, 2000, 2500, 2000, 2500, 750],
+        data: [250, 1250, 2000, 1500, 2000, 1100, 750],
         backgroundColor: 'rgba(43, 167, 198, 0.2)',
         borderColor: 'rgba(43, 167, 198, 1',
         borderWidth: 0.4
@@ -37,7 +71,7 @@ var daily_data = {
 var weekly_data = {
     labels: ["16-22", "23-29", "30-5", "6-12", "13-19", "20-26", "27-3", "4-10", "11-17", "18-24", "25-31"],
     datasets: [{
-        data: [550, 1250, 1000, 1500, 2000, 1500, 1750, 1250, 1750, 2250, 1750, 2250],
+        data: [550, 1250, 1000, 1500, 2000, 1500, 1750, 1250, 1750, 1150, 1750, 1250],
         backgroundColor: 'rgba(0, 0, 132, 0.2)',
         borderColor: 'rgba(169, 173, 255, 1)',
         borderWidth: 0.7
@@ -49,7 +83,7 @@ var weekly_data = {
 var monthly_data = {
     labels: ["January", "February", "March", "April", "May", "June", "July"],
     datasets: [{
-        data: [950, 750, 1500, 1000, 1700, 2500, 1350],
+        data: [950, 750, 1500, 1000, 1600, 1500, 1350],
         backgroundColor: 'rgba(54, 202, 21, 0.2)',
         borderColor: 'rgba(54, 202, 21, 1)',
         borderWidth: 1
@@ -71,31 +105,6 @@ var myChart = new Chart(ctx, {
     }
 });
 
-//click through the traffic tabs
-
-$("#hourly").click(function() {
-    myChart.config.data = hourly_data;
-    myChart.update();
-
-});
-
-$("#daily").click(function() {
-    myChart.config.data = daily_data;
-    myChart.update();
-
-});
-
-$("#weekly").click(function() {
-    myChart.config.data = weekly_data;
-    myChart.update();
-
-});
-
-$("#monthly").click(function() {
-    myChart.config.data = monthly_data;
-    myChart.update();
-
-});
 
 
 //bar chart  for daily traffic
@@ -106,18 +115,21 @@ var myBarChart = new Chart(barChart, {
     data: {
         labels: ["January", "February", "March", "April", "May", "June", "July"],
         datasets: [{
+            label:'PM',
             data: [950, 750, 1500, 1000, 1700, 2500, 1350],
             backgroundColor: 'rgba(138, 0, 255, 1)',
-            
-        },{
+
+        }, {
+            label:'AM',
             data: [450, 750, 1200, 1600, 1200, 2000, 1000],
             backgroundColor: 'rgba(54, 202, 21, 1)',
-            
+
         }]
     },
     options: {
         legend: {
-            display: false
+            display: true,
+            position: "bottom"
         }
 
     }
@@ -146,10 +158,8 @@ var myDoughnutChart = new Chart(donutChart, {
                 "#00CC33",
                 "#3333CC",
                 "#6633ff"
-
             ]
         }]
-
     },
     options: {
 
@@ -164,3 +174,93 @@ var myDoughnutChart = new Chart(donutChart, {
     }
 
 });
+
+
+//click through the traffic tabs
+
+$("#hourly").click(function(event) {
+    event.preventDefault(event);
+    $times_class.removeClass('active');
+    $(this).addClass('active');
+    myChart.config.data = hourly_data;
+    myChart.update();
+
+});
+
+$("#daily").click(function(event) {
+    event.preventDefault(event);
+    $times_class.removeClass('active');
+    $(this).addClass('active');
+    myChart.config.data = daily_data;
+    myChart.update();
+
+});
+
+$("#weekly").click(function(event) {
+    event.preventDefault(event);
+    $times_class.removeClass('active');
+    $(this).addClass('active');
+    myChart.config.data = weekly_data;
+    myChart.update();
+
+});
+
+$("#monthly").click(function(event) {
+    event.preventDefault(event);
+    $times_class.removeClass('active');
+    $(this).addClass('active');
+    myChart.config.data = monthly_data;
+    myChart.update();
+
+});
+
+
+// click functions for closing the alert
+
+$alert_close.click(function(){
+    $alert.fadeOut(700);
+});
+
+
+// auto complete for search bars
+
+
+$( function() {
+    var users = [
+      "phil johnson",
+      "thot leader",
+      "lady lexy",
+      "zaki warfel ",
+      "kourosh mirzaei",
+      "jam goodarzi",
+      "fohdla mcarthy",
+      "amanda winchester"
+    ];
+    $( "#search" ).autocomplete({
+      source: users
+    });
+  } );
+
+
+
+
+
+"phil johnson",
+      "thot leader",
+      "lady lexy",
+      "zaki warfel ",
+      "kourosh mirzaei",
+      "jam goodarzi",
+      "fohdla mcarthy",
+      "amanda winchester"
+  
+
+
+
+
+
+
+
+
+
+

@@ -1,127 +1,244 @@
-   
-.main-content {
-    @include flex-display(flex, column, space-between, 100%);
-    @include media(tablet) {
-        
-        @include flex-display(flex, row, space-around, 100%);
-            
-        }
-
-        .main-wrapper{
-            margin:auto;
-
-        }
-
-}
-
-.left-nav {
-    @include flex-display(flex, row, space-around, 100%);
-    background-color: #9999FF;
-    margin-bottom: 4px;
-    height: 60px;
-    @include media(tablet) {
-        @include flex-display(flex, column, flex-start, 15%,center);
-        height: inherit;
-            
-        }
-    & svg {
-        margin: 10px 10px;
-        border-bottom: 2px solid black;
-        border-bottom-right-radius: 5px;
-        border-bottom-left-radius: 5px;
-    }
-}
-
-.times {
-    @include flex-display(flex, row, space-around, 100%);
-    margin: 20px 10px;
-    & h2 {
-        flex-grow: 2;
-    }
-}
-
-.social {
-    @include flex-display(flex, column, space-between, 100%);
-    & .wrapper {
-        @include flex-display(flex, row, space-around, 90%, center);
-        height: 100px;
-        margin: 10px auto;
-        background-color: $light-blue;
-        border-radius: 8px;
-    }
-    & .icon {
-        display: flex;
-        width: 60px;
-        height: 60px;
-        border-radius: 30px;
-        background-color: $hard-blue;
-        & svg {
-            margin: auto;
-            fill: #FFF;
-        }
-    }
-    & .state {
-        @include flex-display(flex, column, space-between, 40%);
-        & h4 {
-            color: $hard-blue-l;
-            font-size: 1.3em;
-            margin: 10px 0;
-        }
-        & span {
-            font-size: 2em;
-        }
-    }
-}
-
-.container {
-    @include flex-display(flex, column, space-between, 90%, center);
-    margin: $auto;
-}
-
-.member-info {
-    @include flex-display(flex, row, space-around, 100%, center);
-    border-bottom: 2px solid rgba(175, 92, 138, 0.1);
-    margin-bottom: 10px;
-    padding-bottom: 10px;
-    & .member-name {
-        font-size: 1.1em;
-        color: rgba(95, 116, 207, 0.9);
-    }
-    & .join-date {
-        font-size: 1.1em;
-        color: $text-black-l;
-    }
-    & .email {
-        font-size: 1em;
-        color: $text-black-l
-    }
-}
-
-.activity-details {
-    @include flex-display(flex, row, space-around, 100%, center);
-    border-bottom: 2px solid rgba(175, 92, 138, 0.1);
-    margin-bottom: 10px;
-    padding-bottom: 10px;
-    & img {
-        margin-right: 4px;
-    }
-    & .activity-time {
-        color: #0066CC;
-    }
-    & .activity-name {
-        font-size: 1.2em;
-        color: $text-black-l;
-    }
-    & .activity-arrow {
-        width: 20px;
-        height: 20px;
-    }
-}
-
-.last {
-    border-bottom: none;
-}
-
-.info {
-    width: 86%;
-}
+       .main-content {
+           @include flex-display(flex, column, space-between, 100%);
+           @include media(tablet) {
+               @include flex-display(flex, row, space-around, 100%);
+           }
+           .main-wrapper {
+               @include flex-display(flex, column);
+               flex-wrap: wrap;
+               width: 100%;
+               margin: auto;
+           }
+       }
+       
+       .left-nav {
+           @include flex-display(flex, row, space-around, 100%);
+           background-color: #9999FF;
+           margin-bottom: 4px;
+           height: 60px;
+           border-radius: 2px;
+           @include media(tablet) {
+               @include flex-display(flex, column, flex-start, 9%, center);
+               height: inherit;
+               & a {
+                   margin-bottom: 20px;
+                   @include media(laptop) {
+                       width: 100%;
+                   }
+               }
+           }
+           & .active-a {
+               border-bottom: 4px solid #EBB301;
+               @include media(tablet) {
+                   border-bottom: none;
+                   border-left: 4px solid #EBB301;
+               }
+           }
+           & svg {
+               margin: 10px;
+           }
+           .dashboard-svg {
+               padding-right: 3px;
+           }
+       }
+       
+       .tablet-column {
+           @include flex-display(flex, row, space-between, 100%, center);
+           background-color: $dark-purple-l;
+           .dashboard-column {
+               display: none;
+               @include media(tablet) {
+                   display: flex;
+                   background-color: #C7DAEC;
+                   width: 30%;
+                   & h2 {
+                       margin-left: 16px;
+                   }
+               }
+               @include media(laptop) {
+                   width: 25%;
+                   & h2 {
+                       margin-left: 26px;
+                   }
+               }
+           }
+           .search-column {
+               width: 100%;
+               background-color: #C7DAEC;
+               @include media(tablet) {
+                   border-radius: 20px;
+                   background-color: initial;
+                   width: 60%;
+               }
+           }
+       }
+       
+       .times {
+          transition: $trans-default;
+           @include flex-display(flex, row, space-around, 100%, center);
+           margin: 20px 0px;
+           @include media(tablet) {
+               justify-content: flex-end;
+               width: 80%;
+               & a {
+                   transition: $trans linear;
+                   margin-left: 10px;
+               }
+           }
+       }
+       
+       .social {
+           @include flex-display(flex, column, space-between, 100%);
+           border-top: $border-color;
+           border-bottom: $border-color;
+           padding-bottom: 20px;
+           @include media(tablet) {
+               @include flex-display(flex, row, space-between, 100%);
+               flex-wrap: wrap;
+           }
+           @include media(laptop) {
+               padding-bottom: 30px;
+           }
+           & h2 {
+               @include media(tablet) {
+                   width: 100%;
+               }
+           }
+           & .wrapper {
+               @include flex-display(flex, row, space-around, 90%, center);
+               height: 100px;
+               margin: 10px auto;
+               background-color: $light-blue;
+               border-radius: 8px;
+               @include media(tablet) {
+                   width: 48%;
+               }
+               @include media(laptop) {
+                   width: 30%
+               }
+           }
+           & .icon {
+               display: flex;
+               width: 60px;
+               height: 60px;
+               border-radius: 30px;
+               background-color: $hard-blue;
+               & svg {
+                   margin: auto;
+                   fill: #FFF;
+               }
+           }
+           & .state {
+               @include flex-display(flex, column, space-between, 40%);
+               & h4 {
+                   color: $hard-blue-l;
+                   font-size: 1.3em;
+                   margin: 10px 0;
+               }
+               & span {
+                   font-size: 2em;
+               }
+           }
+       }
+       
+       .container {
+           @include flex-display(flex, column, space-between, 90%, center);
+           margin: $auto;
+       }
+       
+       .member-info {
+           @include flex-display(flex, row, space-around, 100%, center);
+           border-bottom: 1px solid rgba(175, 92, 138, 0.1);
+           margin-bottom: 10px;
+           padding-bottom: 10px;
+           & .member-name {
+               @include font-fam-size( 1.1em, $main-font-2, italic, rgba(95, 116, 207, 0.9));
+           }
+           & .join-date {
+               font-size: 1.1em;
+               color: $text-black-l;
+           }
+           & .email {
+               font-size: 1em;
+               color: $text-black-l
+           }
+       }
+       
+       .activity-details {
+           @include flex-display(flex, row, space-around, 100%, center);
+           border-bottom: 2px solid rgba(175, 92, 138, 0.1);
+           margin-bottom: 10px;
+           padding-bottom: 10px;
+           & img {
+               margin-right: 4px;
+           }
+           & .activity-time {
+               color: $hard-blue-l;
+           }
+           & .activity-name {
+               @include font-fam-size( 1em, $main-font-2, 100, $text-black-l)
+           }
+           & .activity-arrow {
+               width: 20px;
+               height: 20px;
+           }
+       }
+       
+       .last {
+           border-bottom: none;
+       }
+       
+       .info {
+           width: 86%;
+       }
+       
+       // popup modal styles\\
+       .popup {
+           width: 100%;
+           height: 100%;
+           display: none;
+           position: fixed;
+           top: 0px;
+           left: 0px;
+           background: rgba(0, 0, 0, 0.75);
+           cursor: default;
+       }
+       
+       .popup-inner {
+           z-index: 1;
+           margin: auto;
+           @include flex-display(flex, column, space-around, 40%, center);
+           border: 10px solid $highlight;
+           border-radius: 10px;
+           h2 {
+               margin: 0 10px;
+               width: 100%;
+               color: $highlight;
+               background-color: #970078;
+               padding: 10px;
+               border-radius: 20px;
+               text-shadow: $text-shadow;
+           }
+           .popup-close {
+               font-size: 1.9em;
+               font-weight: bolder;
+               line-height: 0.5;
+               width: 24px;
+               height: 25px;
+               border-radius: 25px;
+               background-color: #000;
+               color: $highlight;
+               position: relative;
+               left: 201px;
+               bottom: 20px;
+               border: none;
+           }
+           p {
+               @include font-fam-size( 1.2em, $main-font-2, bold, $text-black-m);
+               background-color: #FFF48D;
+               height: 35px;
+               width: 80%;
+               border-radius: 20px;
+               line-height: 2;
+           }
+       }
