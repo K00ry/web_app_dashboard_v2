@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Kourosh Mirzaei's Web App</title>
     <link rel="stylesheet" href="css/application.css">
-    <link rel="stylesheet" href="//code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
     <link href='https://fonts.googleapis.com/css?family=Josefin+Sans:700,700italic|Poiret+One' rel='stylesheet' type='text/css'>
 </head>
 
@@ -34,7 +34,7 @@
                 <div class="popup-inner">
                     <a class="popup-close" data-popup-close="popup-1" href="#">x</a>
                     <h2>Notifications:</h2>
-                    <p>Add Orian as a friend</p>
+                    <p>Add Kourosh as a friend</p>
                     <p>Change your initial password</p>
                     <p>Invite friends to MyApp</p>
                 </div>
@@ -325,8 +325,9 @@
                     <form>
                         <fieldset>
                             <legend>Find and message user</legend>
-                            <input id="search-user" type="text" name="search" placeholder="Search for user..." data-search="">
+                            <input id="search-user" type="text" name="searchUser" placeholder="Search for user..." data-search="">
                             <textarea id="user-message" name="message" placeholder="Message for user"></textarea>
+                            <div class="message-alert"></div>
                             <button class="action-button blue large-button" type="submit" value="send" id="btn-message-send">Send</button>
                         </fieldset>
                     </form>
@@ -453,8 +454,9 @@
                 </div>
             </div>
     </main>
-    <script src="https://code.jquery.com/jquery-1.12.3.min.js"></script>
-    <script src="https://code.jquery.com/ui/1.12.0/jquery-ui.js"></script>
-    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.1.6/Chart.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.0.0.min.js" type="text/javascript"></script>
+    <script src="https://code.jquery.com/jquery-migrate-3.0.0.min.js" type="text/javascript"></script>
+    <script src="https://code.jquery.com/ui/1.11.4/jquery-ui.js" type="text/javascript"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.1.6/Chart.js" type="text/javascript"></script>
     <script src="js/webapp.js"></script>
 </body>

@@ -8,6 +8,8 @@ $alert = $('.alert');
 $alert_close = $('.close-thik');
 $search = $('#search');
 $times_class = $('.times a');
+$modal = $('.message-alert');
+
 
 
 
@@ -15,25 +17,25 @@ $times_class = $('.times a');
 // notify button trigger
 
 
-$bell_button.click(function(){
-    $popup.fadeIn().css('display','flex');
+$bell_button.click(function() {
+    $popup.fadeIn().css('display', 'flex');
+    $search.fadeOut();
+
 
 });
-$popup_close.click(function(){
+$popup_close.click(function() {
     $popup.fadeOut();
+    $search.fadeIn();
 
 
 });
 
+// nav bar avtivation
+$('.left-nav a').click(function(){
+    $('.left-nav a').removeClass('active-a');
+    $(this).addClass('active-a');
 
-
-
-
-
-
-
-
-
+});
 
 
 
@@ -115,12 +117,12 @@ var myBarChart = new Chart(barChart, {
     data: {
         labels: ["January", "February", "March", "April", "May", "June", "July"],
         datasets: [{
-            label:'PM',
+            label: 'PM',
             data: [950, 750, 1500, 1000, 1700, 2500, 1350],
             backgroundColor: 'rgba(138, 0, 255, 1)',
 
         }, {
-            label:'AM',
+            label: 'AM',
             data: [450, 750, 1200, 1600, 1200, 2000, 1000],
             backgroundColor: 'rgba(54, 202, 21, 1)',
 
@@ -217,7 +219,7 @@ $("#monthly").click(function(event) {
 
 // click functions for closing the alert
 
-$alert_close.click(function(){
+$alert_close.click(function() {
     $alert.fadeOut(700);
 });
 
@@ -225,35 +227,124 @@ $alert_close.click(function(){
 // auto complete for search bars
 
 
-$( function() {
+$(function() {
     var users = [
-      "phil johnson",
-      "thot leader",
-      "lady lexy",
-      "zaki warfel ",
-      "kourosh mirzaei",
-      "jam goodarzi",
-      "fohdla mcarthy",
-      "amanda winchester"
+        "phil johnson",
+        "thot leader",
+        "lady lexy",
+        "zaki warfel ",
+        "kourosh mirzaei",
+        "jam goodarzi",
+        "fohdla mcarthy",
+        "amanda winchester"
     ];
-    $( "#search" ).autocomplete({
-      source: users
+    $("#search-user").autocomplete({
+        source: users
     });
-  } );
+});
+
+ ////////// sent message alerts \\\\\\\\\\\
+
+function checking() {
+
+    if ($('#search-user').val() === '' && $('#user-message').val() === '') {
+        $modal.html('<p>the fields are empty.</p>');
+        $modal.fadeIn(900).delay(900).fadeOut(900);
+
+    } else if ($('#search-user').val() !== '' && $('#user-message').val() !== '') {
+        $modal.html('<p>Message Sent.</p>');
+        $modal.css("background-color", "green")
+        $modal.fadeIn(900).delay(900).fadeOut(900);
+    }
+    else if ($('#search-user').val() !== '' && $('#user-message').val() === '') {
+        $modal.html('<p>You Need to Write a Message.</p>');
+        $modal.css("background-color", "orange")
+        $modal.fadeIn(900).delay(900).fadeOut(900);
+
+    }else{
+        $modal.html('<p>Choose a Person to Send the Message to.</p>');
+        $modal.css("background-color", "orange")
+        $modal.fadeIn(900).delay(900).fadeOut(900);
+    }
+};
+
+$('#btn-message-send').click(function(event) {
+    event.preventDefault(event);
+    checking();
+    console.log($modal);
+});
+
+
+ ////////// saving in local storage \\\\\\\\\\\
+
+
+// email slider
 
 
 
+$(function () {
+    var data = localStorage.getItem("showning");
+    if (data !== null) {
+        $('#email-pref').attr("checked", "checked");
+    }
+});
 
+$('#email-pref').click(function () {
 
-"phil johnson",
-      "thot leader",
-      "lady lexy",
-      "zaki warfel ",
-      "kourosh mirzaei",
-      "jam goodarzi",
-      "fohdla mcarthy",
-      "amanda winchester"
+    if ($(this).is(":checked")) {
+        localStorage.setItem("showning", 1);
+    } else {
+        localStorage.removeItem("showning");
+    }
   
+});
+
+// profile slider
+$(function () {
+    var data = localStorage.getItem("profiling");
+    if (data !== null) {
+        $('#profile-pref').attr("checked", "checked");
+    }
+});
+
+$('#profile-pref').click(function () {
+
+    if ($(this).is(":checked")) {
+        localStorage.setItem("profiling", 1);
+    } else {
+        localStorage.removeItem("profiling");
+    }
+  
+});
+
+// select value
+
+$(function() {
+    $('#user-timezone').change(function() {
+        localStorage.setItem('todoData', this.value);
+    });
+    if(localStorage.getItem('todoData')){
+        $('#user-timezone').val(localStorage.getItem('todoData'));
+    }
+});
+
+
+
+
+///// saving alert \\\\\\\\
+
+
+$('#btn-settings-save').click(function(event){
+    event.preventDefault(event);
+    alert('Settings Saved!');
+
+});
+
+
+
+
+
+
 
 
 

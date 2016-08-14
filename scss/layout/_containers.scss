@@ -21,6 +21,7 @@
                @include flex-display(flex, column, flex-start, 9%, center);
                height: inherit;
                & a {
+                  transition: all .6s;
                    margin-bottom: 20px;
                    @include media(laptop) {
                        width: 100%;
@@ -74,7 +75,7 @@
        }
        
        .times {
-          transition: $trans-default;
+           transition: $trans-default;
            @include flex-display(flex, row, space-around, 100%, center);
            margin: 20px 0px;
            @include media(tablet) {
@@ -210,6 +211,14 @@
            @include flex-display(flex, column, space-around, 40%, center);
            border: 10px solid $highlight;
            border-radius: 10px;
+           width:85%;
+           @include media(tablet) {
+                   width: 50%;
+               }
+               @include media(laptop) {
+                   width: 40%;
+               }
+
            h2 {
                margin: 0 10px;
                width: 100%;
@@ -229,9 +238,16 @@
                background-color: #000;
                color: $highlight;
                position: relative;
-               left: 201px;
+               left: 134px;
                bottom: 20px;
-               border: none;
+               @include media(tablet) {
+                   left: 188px;
+                  
+               }
+               @include media(laptop) {
+                   left: 201px;
+                   
+               }
            }
            p {
                @include font-fam-size( 1.2em, $main-font-2, bold, $text-black-m);

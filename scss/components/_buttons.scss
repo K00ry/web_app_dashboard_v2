@@ -91,11 +91,13 @@
 .wrapper-button {
     @include flex-display(flex, row, space-between, 100%);
     .small-button {
+        margin: 10px auto;
         width: 49%;
     }
 }
 
 .large-button {
+    margin: 10px auto;
     width: 100%;
 }
 
@@ -160,4 +162,7 @@ input:checked + .slider:before {
 .slider.round:before {
     border-radius: 50%;
 }
+#btn-settings-cancel{
 
+        background-color: grey;
+}
