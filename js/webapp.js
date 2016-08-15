@@ -253,20 +253,20 @@ function checking() {
 
     } else if ($('#search-user').val() !== '' && $('#user-message').val() !== '') {
         $modal.html('<p>Message Sent.</p>');
-        $modal.css("background-color", "green")
+        $modal.css("background-color", "green");
         $modal.fadeIn(900).delay(900).fadeOut(900);
     }
     else if ($('#search-user').val() !== '' && $('#user-message').val() === '') {
         $modal.html('<p>You Need to Write a Message.</p>');
-        $modal.css("background-color", "orange")
+        $modal.css("background-color", "orange");
         $modal.fadeIn(900).delay(900).fadeOut(900);
 
     }else{
         $modal.html('<p>Choose a Person to Send the Message to.</p>');
-        $modal.css("background-color", "orange")
+        $modal.css("background-color", "orange");
         $modal.fadeIn(900).delay(900).fadeOut(900);
     }
-};
+}
 
 $('#btn-message-send').click(function(event) {
     event.preventDefault(event);

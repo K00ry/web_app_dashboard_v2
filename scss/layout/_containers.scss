@@ -28,6 +28,9 @@
                    }
                }
            }
+            @include media(laptop) {
+                   width: 6%;
+               }
            & .active-a {
                border-bottom: 4px solid #EBB301;
                @include media(tablet) {
