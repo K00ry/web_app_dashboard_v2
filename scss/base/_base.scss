@@ -38,10 +38,7 @@ form {
     width: 100%;
 }
 
-#donut-chart {
-    @include media(tablet) {}
-    @include media(laptop) {}
-}
+
 
 canvas {
     padding: 10px;

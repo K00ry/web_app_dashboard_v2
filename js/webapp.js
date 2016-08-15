@@ -14,6 +14,15 @@ $modal = $('.message-alert');
 
 
 
+
+//global chart settings 
+
+Chart.defaults.global.defaultFontFamily = "'Josefin Sans', sans-serif";
+Chart.defaults.global.maintainAspectRatio = false;
+Chart.defaults.global.responsive = true;
+Chart.defaults.bar.scaleShowVerticalLines = false;
+
+
 // notify button trigger
 
 
