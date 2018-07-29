@@ -7,7 +7,7 @@ $dot = $('.dot');
 $alert = $('.alert');
 $alert_close = $('.close-thik');
 $search = $('#search');
-$times_class = $('.times a');
+$times_class = $('.time-button');
 $modal = $('.message-alert');
 
 
