@@ -10,7 +10,7 @@
                margin: auto;
            }
        }
-       
+
        .left-nav {
            @include flex-display(flex, row, space-around, 100%);
            background-color: #9999FF;
@@ -21,16 +21,16 @@
                @include flex-display(flex, column, flex-start, 9%, center);
                height: inherit;
                & a {
-                  transition: all .6s;
+                   transition: all .6s;
                    margin-bottom: 20px;
                    @include media(laptop) {
                        width: 100%;
                    }
                }
            }
-            @include media(laptop) {
-                   width: 6%;
-               }
+           @include media(laptop) {
+               width: 6%;
+           }
            & .active-a {
                border-bottom: 4px solid #EBB301;
                @include media(tablet) {
@@ -45,7 +45,7 @@
                padding-right: 3px;
            }
        }
-       
+
        .tablet-column {
            @include flex-display(flex, row, space-between, 100%, center);
            background-color: $dark-purple-l;
@@ -76,21 +76,18 @@
                }
            }
        }
-       
+
        .times {
            transition: $trans-default;
            @include flex-display(flex, row, space-around, 100%, center);
-           margin: 20px 0px;
+           margin: 5px 0px;
+           padding: 5px 0px;
            @include media(tablet) {
                justify-content: flex-end;
                width: 80%;
-               & a {
-                   transition: $trans linear;
-                   margin-left: 10px;
-               }
            }
        }
-       
+
        .social {
            @include flex-display(flex, column, space-between, 100%);
            border-top: $border-color;
@@ -144,12 +141,12 @@
                }
            }
        }
-       
+
        .container {
            @include flex-display(flex, column, space-between, 90%, center);
            margin: $auto;
        }
-       
+
        .member-info {
            @include flex-display(flex, row, space-around, 100%, center);
            border-bottom: 1px solid rgba(175, 92, 138, 0.1);
@@ -167,7 +164,7 @@
                color: $text-black-l
            }
        }
-       
+
        .activity-details {
            @include flex-display(flex, row, space-around, 100%, center);
            border-bottom: 2px solid rgba(175, 92, 138, 0.1);
@@ -187,16 +184,14 @@
                height: 20px;
            }
        }
-       
+
        .last {
            border-bottom: none;
        }
-       
+
        .info {
            width: 86%;
-       }
-       
-       // popup modal styles\\
+       } // popup modal styles\\
        .popup {
            width: 100%;
            height: 100%;
@@ -207,53 +202,50 @@
            background: rgba(0, 0, 0, 0.75);
            cursor: default;
        }
-       
+
        .popup-inner {
            z-index: 1;
            margin: auto;
            @include flex-display(flex, column, space-around, 40%, center);
            border: 10px solid $highlight;
            border-radius: 10px;
-           width:85%;
+           width: 85%;
            @include media(tablet) {
-                   width: 50%;
-               }
-               @include media(laptop) {
-                   width: 40%;
-               }
+               width: 50%;
+           }
+           @include media(laptop) {
+               width: 40%;
+           }
 
            h2 {
                margin: 0 10px;
-               width: 100%;
+               width: 90%;
                color: $highlight;
                background-color: #970078;
                padding: 10px;
-               border-radius: 20px;
-               text-shadow: $text-shadow;
+               border-radius: 20px; 
            }
-           .popup-close {
-               font-size: 1.9em;
-               font-weight: bolder;
-               line-height: 0.5;
-               width: 24px;
-               height: 25px;
-               border-radius: 25px;
-               background-color: #000;
-               color: $highlight;
-               position: relative;
-               left: 134px;
-               bottom: 20px;
-               @include media(tablet) {
-                   left: 188px;
-                  
-               }
-               @include media(laptop) {
-                   left: 201px;
-                   
+           .popup-close-container {
+               width: 100%; 
+               a {
+                   float: right;
+                   margin: 8px 5px;
+                   width: 10%;
+                   font-size: 1.5em;
+                   border-radius: 50%;
+                   background-color: $highlight;
+                   color: #000;
+                   @include media(tablet) {
+                       // left: 188px;
+                   }
+                   @include media(laptop) {
+                       // left: 201px;
+                   }
                }
            }
+
            p {
-               @include font-fam-size( 1.2em, $main-font-2, bold, $text-black-m);
+               @include font-fam-size( 1em, $main-font-2, bold, $text-black-m);
                background-color: #FFF48D;
                height: 35px;
                width: 80%;
